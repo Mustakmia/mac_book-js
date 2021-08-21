@@ -5,7 +5,7 @@ function priceOfProduct(priceId, price) {
     calculateTotal();
 }
 
-// total price 
+// total price function
 function calculateTotal() {
     const memoryCost = document.getElementById('extraMemory').innerText;
     const ssdCost = document.getElementById('extraStorage').innerText;
@@ -16,7 +16,7 @@ function calculateTotal() {
     totalPrice.innerText = parseInt(memoryCost) + parseInt(ssdCost) + parseInt(deliveryCost) + parseInt(bestPrice);
     totalOverall.innerText = totalPrice.innerText;
 }
-// memory 
+// memory cosr handler
 
 document.getElementById('memory8GB').addEventListener('click', function() {
     priceOfProduct('extraMemory', 0);
@@ -25,7 +25,7 @@ document.getElementById('memory16GB').addEventListener('click', function() {
     priceOfProduct('extraMemory', 180);
 })
 
-// ssd 
+// ssd cost handler
 document.getElementById('ssd256GB').addEventListener('click', function() {
     priceOfProduct('extraStorage', 0);
 })
@@ -36,7 +36,7 @@ document.getElementById('ssd1TB').addEventListener('click', function() {
     priceOfProduct('extraStorage', 180);
 })
 
-// delivery 
+// delivery cost handler
 document.getElementById('deliveryFree').addEventListener('click', function() {
     priceOfProduct('deliveryCharge', 0);
 })
@@ -45,7 +45,7 @@ document.getElementById('delivery20').addEventListener('click', function() {
 })
 
 
-// promo check 
+// promo code handler
 document.getElementById('promoBtn').addEventListener('click', function() {
     const promoField = document.getElementById('promoField');
     const totalPrice = document.getElementById('totalPrice');
